@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Amodelsafrica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag :modernizr %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'animations' %>
+    <%= stylesheet_link_tag 'fonts' %>
+  </head>
+
+  <body>
+    <div class="preloader">
+  		<div class="preloader_image"></div>
+  	</div>
+    <div id="canvas">
+	     <div id="box_wrapper" class="container">
+         <%= render 'shared/navbar' %>
+       <%= yield %>
+       <%= render 'shared/foot' %>
+       <%= render 'shared/footer' %>
+       <%= javascript_include_tag 'jquery.min' %>
+       <%= javascript_include_tag 'main' %>
+       <%= javascript_include_tag 'compressed' %>
+       </div>
+    </div>
+  </body>
+</html>

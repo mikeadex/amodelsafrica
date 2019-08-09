@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Amodels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Age</th>
+      <th>Desc</th>
+      <th>Nationality</th>
+      <th>City</th>
+      <th>Category</th>
+      <th>Height</th>
+      <th>Burst</th>
+      <th>Waist</th>
+      <th>Hip</th>
+      <th>Eye</th>
+      <th>Shoe</th>
+      <th>Fb</th>
+      <th>Tw</th>
+      <th>Ig</th>
+      <th>Email</th>
+      <th>Tel</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @amodels.each do |amodel| %>
+      <tr>
+        <td><%= amodel.name %></td>
+        <td><%= amodel.gender %></td>
+        <td><%= amodel.age %></td>
+        <td><%= amodel.desc %></td>
+        <td><%= amodel.nationality %></td>
+        <td><%= amodel.city %></td>
+        <td><%= amodel.category %></td>
+        <td><%= amodel.height %></td>
+        <td><%= amodel.burst %></td>
+        <td><%= amodel.waist %></td>
+        <td><%= amodel.hip %></td>
+        <td><%= amodel.eye %></td>
+        <td><%= amodel.shoe %></td>
+        <td><%= amodel.fb %></td>
+        <td><%= amodel.tw %></td>
+        <td><%= amodel.ig %></td>
+        <td><%= amodel.email %></td>
+        <td><%= amodel.tel %></td>
+        <td><%= link_to 'Show', amodel %></td>
+        <td><%= link_to 'Edit', edit_amodel_path(amodel) %></td>
+        <td><%= link_to 'Destroy', amodel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Amodel', new_amodel_path %>

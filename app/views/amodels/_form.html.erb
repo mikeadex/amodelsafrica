@@ -1,0 +1,107 @@
+<%= form_with(model: amodel, local: true) do |form| %>
+  <% if amodel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(amodel.errors.count, "error") %> prohibited this amodel from being saved:</h2>
+
+      <ul>
+      <% amodel.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_field :gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.text_field :age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :desc %>
+    <%= form.text_area :desc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nationality %>
+    <%= form.text_field :nationality %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category %>
+    <%= form.text_field :category %>
+  </div>
+
+  <div class="field">
+    <%= form.label :height %>
+    <%= form.text_field :height %>
+  </div>
+
+  <div class="field">
+    <%= form.label :burst %>
+    <%= form.text_field :burst %>
+  </div>
+
+  <div class="field">
+    <%= form.label :waist %>
+    <%= form.text_field :waist %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hip %>
+    <%= form.text_field :hip %>
+  </div>
+
+  <div class="field">
+    <%= form.label :eye %>
+    <%= form.text_field :eye %>
+  </div>
+
+  <div class="field">
+    <%= form.label :shoe %>
+    <%= form.text_field :shoe %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fb %>
+    <%= form.text_field :fb %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tw %>
+    <%= form.text_field :tw %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ig %>
+    <%= form.text_field :ig %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tel %>
+    <%= form.text_field :tel %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
