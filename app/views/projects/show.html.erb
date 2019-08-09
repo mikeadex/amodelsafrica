@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @project.title %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @project.category %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @project.description %>
+</p>
+
+<p>
+  <strong>Pin:</strong>
+  <%= @project.pin %>
+</p>
+
+<p>
+  <strong>Linkedin:</strong>
+  <%= @project.linkedin %>
+</p>
+
+<p>
+  <strong>Ig:</strong>
+  <%= @project.ig %>
+</p>
+
+<p>
+  <strong>Fb:</strong>
+  <%= @project.fb %>
+</p>
+
+<p>
+  <strong>Tw:</strong>
+  <%= @project.tw %>
+</p>
+
+<p>
+  <strong>Youtube:</strong>
+  <%= @project.youtube %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

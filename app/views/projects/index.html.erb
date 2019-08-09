@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+<section class="ls page_portfolio section_padding_top_110">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+
+        <div class="filters isotope_filters bottommargin_60">
+          <a href="#" data-filter="*" class="selected">All</a>
+          <a href="#" data-filter=".fashion">Fashio</a>
+          <a href="#" data-filter=".session">Session</a>
+          <a href="#" data-filter=".studio">Studio</a>
+        </div>
+
+
+        <div class="isotope_container isotope row masonry-layout columns_margin_bottom_30" data-filters=".isotope_filters">
+
+
+
+          <% @projects.each do |project| %>
+
+          <div class="isotope-item col-lg-3 col-md-4 col-sm-6 fashion">
+            <div class="vertical-item gallery-item small-item content-absolute text-center">
+              <div class="item-media">
+                <img src="/gallery/14.jpg" alt="">
+                <div class="media-links">
+                  <div class="links-wrap">
+                    <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal]" href="/gallery/14.jpg"></a>
+                    <a class="p-link" title="" href="gallery-single.html"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="item-content with_background">
+                <h4 class="item-meta greylinks">
+                  <a href="gallery-single.html"><%= project.title %></a>
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <% end %>
+
+        </div>
+        <!-- eof .isotope_container.row -->
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+
+<%= link_to 'New Project', new_project_path %>
