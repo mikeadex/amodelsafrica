@@ -1,111 +1,116 @@
-<%= form_with(model: amodel, local: true) do |form| %>
-  <% if amodel.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(amodel.errors.count, "error") %> prohibited this amodel from being saved:</h2>
+<%= form_for @amodel, :html => {:multipart => true} do |f| %>
+<% if amodel.errors.any? %>
+	<div id="error_explanation">
+		<h2><%= pluralize(amodel.errors.count, "error") %> prohibited this amodel from being saved:</h2>
 
-      <ul>
-      <% amodel.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <div class="field">
-    <%= form.label :avatar %>
-    <%= form.file_field :avatar %>
-  </div>
+		<ul>
+		<% amodel.errors.full_messages.each do |message| %>
+			<li><%= message %></li>
+		<% end %>
+		</ul>
+	</div>
+<% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+			<section class="ls">
+				<div class="container">
+					<div class="row">
+						<form class="shop-register" role="form">
+							<div class="col-sm-6">
+								<div class="form-group validate-required" id="billing_first_name_field">
+                  <%= f.text_field :name, class: "form-control", placeholder: "Your Name"%>
+								</div>
+								<div class="form-group" id="billing_company_field">
+									<%= f.text_field :gender, class: "form-control", placeholder: "Your Gender" %>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group validate-required" id="billing_last_name_field">
+									<%= f.text_field :city, class: "form-control", placeholder: "Your City of Residence" %>
+								</div>
+								<div class="form-group validate-required validate-email" id="billing_email_field">
+									<%= f.text_field :age, class: "form-control", placeholder: "How old are you?" %>
+								</div>
+							</div>
+							<div class="col-sm-12">
+								<div class="form-group address-field validate-required" id="billing_address_fields">
+									<%= f.text_area :desc, class: "form-control", placeholder: "Tell us About yourself!" %>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group address-field validate-required" id="billing_city_field">
+									<%= f.text_field :nationality, class: "form-control", placeholder: "What Country are you from?" %>
+								</div>
+								<div class="form-group address-field validate-required validate-postcode" id="billing_postcode_field">
+									<%= f.text_field :category, class: "form-control", placeholder: "Model Category" %>
+								</div>
+								<div class="form-group validate-required validate-phone" id="billing_phone_field">
+									<%= f.text_field :height, class: "form-control", placeholder: "What's Your Height?" %>
+								</div>
+								<div class="form-group" id="billing_password_field">
+									<%= f.text_field :burst, class: "form-control", placeholder: "What's Your Burst?" %>
+								</div>
+                <div class="form-group" id="billing_password_field">
 
-  <div class="field">
-    <%= form.label :gender %>
-    <%= form.text_field :gender %>
-  </div>
+									<%= f.text_field :email, class: "form-control", placeholder: "Add your Email " %>
+								</div>
+                <div class="form-group" id="billing_password_field">
 
-  <div class="field">
-    <%= form.label :age %>
-    <%= form.text_field :age %>
-  </div>
+									<%= f.text_field :ig, class: "form-control", placeholder: "Your Instagram Handle" %>
+								</div>
 
-  <div class="field">
-    <%= form.label :desc %>
-    <%= form.text_area :desc %>
-  </div>
+								<div class="file-field">
+									<%= f.file_field :avatar, class: "btn btn-primary btn-sm float-left" %>
+									<div class="file-path-wrapper">
+											Upload your file
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
 
-  <div class="field">
-    <%= form.label :nationality %>
-    <%= form.text_field :nationality %>
-  </div>
+									<%= f.text_field :waist, class: "form-control", placeholder: "What's your Waist" %>
+								</div>
+								<div class="form-group">
 
-  <div class="field">
-    <%= form.label :city %>
-    <%= form.text_field :city %>
-  </div>
+									<%= f.text_field :hip, class: "form-control", placeholder: "What's your Hips" %>
+								</div>
+								<div class="form-group validate-required validate-fax" id="billing_fax_field">
 
-  <div class="field">
-    <%= form.label :category %>
-    <%= form.text_field :category %>
-  </div>
+									<%= f.text_field :eye, class: "form-control", placeholder: "What's the color of your eyes?"%>
+								</div>
+								<div class="form-group" id="billing_password2_field">
 
-  <div class="field">
-    <%= form.label :height %>
-    <%= form.text_field :height %>
-  </div>
+									<%= f.text_field :shoe, class: "form-control", placeholder: "What's your Shoe Size ?" %>
+								</div>
+                <div class="form-group" id="billing_password2_field">
 
-  <div class="field">
-    <%= form.label :burst %>
-    <%= form.text_field :burst %>
-  </div>
+									<%= f.text_field :fb, class: "form-control", placeholder: "What's your FaceBook ID ?" %>
+								</div>
+                <div class="form-group" id="billing_password2_field">
 
-  <div class="field">
-    <%= form.label :waist %>
-    <%= form.text_field :waist %>
-  </div>
+									<%= f.text_field :tw, class: "form-control", placeholder: "What's Your Twitter Handle ?" %>
+								</div>
+								<div class="form-group" id="billing_password_field">
 
-  <div class="field">
-    <%= form.label :hip %>
-    <%= form.text_field :hip %>
-  </div>
+									<%= f.text_field :tel, class: "form-control", placeholder: "Your Phone number" %>
+								</div>
+								<div class="form-group" id="billing_password_field">
+									<label for="billing_password" class="control-label">
+										<span class="grey">Upload Portfolio</span>
+										<span class="required">*</span>
+									</label>
+									<%= f.file_field :portfolios, multiple: true, placeholder: "Upload Your Image Portfolios" %>
+								</div>
+							</div>
+							<div class="col-sm-12">
+								<button type="submit" class="theme_button wide_button color1">Register Now</button>
+								<button type="reset" class="theme_button wide_button">Clear Form</button>
+							</div>
+						</form>
 
-  <div class="field">
-    <%= form.label :eye %>
-    <%= form.text_field :eye %>
-  </div>
 
-  <div class="field">
-    <%= form.label :shoe %>
-    <%= form.text_field :shoe %>
-  </div>
+					</div>
+				</div>
+			</section>
 
-  <div class="field">
-    <%= form.label :fb %>
-    <%= form.text_field :fb %>
-  </div>
-
-  <div class="field">
-    <%= form.label :tw %>
-    <%= form.text_field :tw %>
-  </div>
-
-  <div class="field">
-    <%= form.label :ig %>
-    <%= form.text_field :ig %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :tel %>
-    <%= form.text_field :tel %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

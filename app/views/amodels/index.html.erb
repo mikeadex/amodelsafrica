@@ -1,61 +1,80 @@
 <p id="notice"><%= notice %></p>
+<section class="ls columns_margin_0">
+        <div class="container-fluid">
+          <div class="row bottommargin_30">
+            <div class="col-sm-12">
+              <div class="filters isotope_filters">
+                <a href="#" data-filter="*" class="selected">All</a>
+                <a href="#" data-filter=".fashion">Fashion</a>
+                <a href="#" data-filter=".studio">Studio</a>
+                <a href="#" data-filter=".session">Session</a>
+              </div>
+            </div>
+          </div>
+          <div class="isotope_container isotope row masonry-layout items_portrait columns_margin_bottom_60" data-filters=".isotope_filters">
+            <% @amodels.each do |amodel| %>
+            <div class="isotope-item col-md-4 fashion">
+              <div class="vertical-item item-type1">
+                <%=  image_tag amodel.avatar_url %>
+                <div class="item-media">
+                </div>
+                <div class="item-content">
+                  <h4>
+                    <%=link_to (amodel.name), amodel %>
+                  </h4>
+                  <p><%= amodel.category %></p>
+                  <div class="item-meta">
+                    <div>
+                      <span class="bold">Height</span>
+                      <br>
+                      <span><%= amodel.height %></span>
+                    </div>
+                    <div>
+                      <span class="bold">Bust</span>
+                      <br>
+                      <span><%= amodel.burst %></span>
+                    </div>
+                    <div>
+                      <span class="bold">Waist</span>
+                      <br>
+                      <span><%= amodel.waist %></span>
+                    </div>
+                    <div>
+                      <span class="bold">Hips</span>
+                      <br>
+                      <span><%= amodel.hip %></span>
+                    </div>
+                    <div>
+                      <span class="bold">Shoe</span>
+                      <br>
+                      <span><%= amodel.shoe %></span>
+                    </div>
+                    <div>
+                      <span class="bold">Eyes</span>
+                      <br>
+                      <span><%= amodel.eye %></span>
+                    </div>
+                  </div>
+                  <div class="ds item-social darklinks">
+                    <div>
+                      <a href="#" class="social-icon soc-facebook"></a>
+                      <a href="#" class="social-icon soc-twitter"></a>
+                      <a href="#" class="social-icon soc-google"></a>
+                      <a href="#" class="social-icon soc-instagram"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-<h1>Amodels</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Gender</th>
-      <th>Age</th>
-      <th>Desc</th>
-      <th>Nationality</th>
-      <th>City</th>
-      <th>Category</th>
-      <th>Height</th>
-      <th>Burst</th>
-      <th>Waist</th>
-      <th>Hip</th>
-      <th>Eye</th>
-      <th>Shoe</th>
-      <th>Fb</th>
-      <th>Tw</th>
-      <th>Ig</th>
-      <th>Email</th>
-      <th>Tel</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @amodels.each do |amodel| %>
-      <tr>
-        <td><%= amodel.name %></td>
-        <td><%= amodel.gender %></td>
-        <td><%= amodel.age %></td>
-        <td><%= amodel.desc %></td>
-        <td><%= amodel.nationality %></td>
-        <td><%= amodel.city %></td>
-        <td><%= amodel.category %></td>
-        <td><%= amodel.height %></td>
-        <td><%= amodel.burst %></td>
-        <td><%= amodel.waist %></td>
-        <td><%= amodel.hip %></td>
-        <td><%= amodel.eye %></td>
-        <td><%= amodel.shoe %></td>
-        <td><%= amodel.fb %></td>
-        <td><%= amodel.tw %></td>
-        <td><%= amodel.ig %></td>
-        <td><%= amodel.email %></td>
-        <td><%= amodel.tel %></td>
-        <td><%= link_to 'Show', amodel %></td>
-        <td><%= link_to 'Edit', edit_amodel_path(amodel) %></td>
-        <td><%= link_to 'Destroy', amodel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+            </div>
+          <% end %>
+          <div class="row">
+            <div class="col-sm-12 text-center">
+              <a href="#" class="theme_button">Load more</a>
+            </div>
+          </div>
+        </div>
+</section>
 <br>
 
 <%= link_to 'New Amodel', new_amodel_path %>

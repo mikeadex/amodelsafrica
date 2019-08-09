@@ -1,7 +1,159 @@
 <p id="notice"><%= notice %></p>
+      <section class="ls model-single section_padding_95 columns_padding_25">
+				<div class="container">
+					<div class="row">
+            <div class="col-md-5 col-md-push-7">
+							<div class="vertical-item bottommargin_60">
+								<div class="item-media">
+                  <%=  image_tag @amodel.avatar_url %>
+								</div>
+								<div class="item-content with_background with_padding">
+									<h3 class="text-uppercase"><%= @amodel.name%> </h3>
+									<p class="fontsize_18 bottommargin_30"><%= @amodel.category %></p>
+									<div class="item-meta model-meta">
+										<div>
+											<span class="bold">Height</span>
+											<br>
+											<span><%= @amodel.height %></span>
+										</div>
+										<div>
+											<span class="bold">Bust</span>
+											<br>
+											<span><%= @amodel.burst %></span>
+										</div>
+										<div>
+											<span class="bold">Waist</span>
+											<br>
+											<span><%= @amodel.waist %></span>
+										</div>
+										<div>
+											<span class="bold">Hips</span>
+											<br>
+											<span><%= @amodel.hip %></span>
+										</div>
+										<div>
+											<span class="bold">Shoe</span>
+											<br>
+											<span><%= @amodel.shoe %></span>
+										</div>
+										<div>
+											<span class="bold">Eyes</span>
+											<br>
+											<span><%= @amodel.eye %></span>
+										</div>
+									</div>
+								</div>
+								<div class="ds item-social darklinks text-center">
+									<a href="#" class="social-icon soc-facebook"></a>
+									<a href="#" class="social-icon soc-twitter"></a>
+									<a href="#" class="social-icon soc-google"></a>
+									<a href="#" class="social-icon soc-instagram"></a>
+								</div>
+								<div class="item-content item-contacts with_padding">
+									<div class="media">
+										<div class="media-left">
+											<i class="fa fa-map-marker highlight fontsize_16"></i>
+										</div>
+										<div class="media-body">
+											Jackson’s Street 567, San Diego, California, United St
+										</div>
+									</div>
+									<div class="media">
+										<div class="media-left">
+											<i class="fa fa-phone highlight fontsize_16"></i>
+										</div>
+										<div class="media-body">
+											8 (800) 456-2698,
+											<br> 8 (800) 456-2643
+										</div>
+									</div>
+									<div class="media">
+										<div class="media-left">
+											<i class="flaticon-paper-plane highlight fontsize_16"></i>
+										</div>
+										<div class="media-body">
+											<a href="#">agency@support.com</a>
+											<br>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-md-7 col-md-pull-5">
+							<h2 class="text-uppercase bottommargin_30 fontsize_40">About Model</h2>
+							<p>
+								<%= @amodel.desc %>
+							</p>
+
+							<div class="filters isotope_filters topmargin_50 bottommargin_40">
+								<a href="#" data-filter="*" class="selected">All</a>
+								<a href="#" data-filter=".tests">Tests</a>
+								<a href="#" data-filter=".editorials">Editorials</a>
+								<a href="#" data-filter=".snaps">Snaps</a>
+							</div>
+
+							<div class="isotope_container isotope row columns_padding_5 masonry-layout" data-filters=".isotope_filters">
+								<div class="isotope-item bottommargin_10 col-md-3 col-sm-4 col-xs-6 tests">
+									<div class="vertical-item gallery-item content-absolute text-center cs">
+										<div class="item-media">
+                      <%=  image_tag @amodel.portfolios[1].url %>
+											<div class="media-links">
+                        <%= link_to( image_tag(@amodel.portfolios[1].url), class:'prettyPhoto abs-link', title:'')  %>
+												<a class="prettyPhoto abs-link" title="" data-gal="prettyPhoto[gal]" href="images/models_square/01.jpg"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+							<!-- eof .isotope_container.row -->
+
+							<h2 class="text-uppercase topmargin_110 bottommargin_40">Contact Model</h2>
+
+							<form class="model-contact-form" method="post" action="/">
+								<div class="form-group bottommargin_20">
+									<label for="model-name" class="sr-only">Full Name
+										<span class="required">*</span>
+									</label>
+									<input type="text" aria-required="true" size="30" value="" name="model-name" id="model-name" class="form-control with-icon" placeholder="Enter your Name">
+								</div>
+								<div class="form-group bottommargin_20">
+									<label for="model-email" class="sr-only">Email address
+										<span class="required">*</span>
+									</label>
+									<input type="email" aria-required="true" size="30" value="" name="model-email" id="model-email" class="form-control with-icon" placeholder="Enter your E-mail">
+								</div>
+								<div class="form-group bottommargin_20">
+									<label for="model-phone" class="sr-only">Phone number
+										<span class="required">*</span>
+									</label>
+									<input type="text" aria-required="true" size="30" value="" name="model-phone" id="model-phone" class="form-control with-icon" placeholder="Enter your Mobile">
+								</div>
+								<div class="form-group bottommargin_30">
+									<label for="model-message" class="sr-only">Message</label>
+									<textarea aria-required="true" rows="6" cols="45" name="model-message" id="model-message" class="form-control with-icon" placeholder="Message"></textarea>
+								</div>
+
+								<button type="submit" id="model_contact_form_submit" name="model_contact_submit" class="theme_button margin_0">Send Message</button>
+							</form>
+
+						</div>
+<%= link_to 'Edit', edit_amodel_path(@amodel) %> |
+<%= link_to 'Back', amodels_path %>
+</div>
+</div>
+</section>
+
+
+
+
+<p id="notice"><%= notice %></p>
 <p>
   <strong>Name:</strong>
-  <%=  image_tag @amodel.avatar_url %>
+  <%=  image_tag @amodel.avatar_url(:thumb) %>
 </p>
 <p>
   <strong>Name:</strong>
@@ -91,6 +243,10 @@
 <p>
   <strong>Tel:</strong>
   <%= @amodel.tel %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%=  image_tag @amodel.portfolios[1].url %>
 </p>
 
 <%= link_to 'Edit', edit_amodel_path(@amodel) %> |
