@@ -69,6 +69,6 @@ class AmodelsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def amodel_params
-      params.require(:amodel).permit(:name, :gender, :age, :desc, :nationality, :city, :category, :height, :burst, :waist, :hip, :eye, :shoe, :fb, :tw, :ig, :email, :tel)
+      params.require(:amodel).permit(:name, :gender, :age, :desc, :nationality, :city, :category, :height, :burst, :waist, :hip, :eye, :shoe, :fb, :tw, :ig, :email, :tel, :avatar)
     end
 end

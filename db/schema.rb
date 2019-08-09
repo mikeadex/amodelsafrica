@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_09_131711) do
+ActiveRecord::Schema.define(version: 2019_08_09_155909) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,8 @@ ActiveRecord::Schema.define(version: 2019_08_09_131711) do
     t.string "tel"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "file"
+    t.string "avatar"
   end
 
   create_table "blogs", force: :cascade do |t|
