@@ -5,7 +5,7 @@
             <div class="col-md-5 col-md-push-7">
 							<div class="vertical-item bottommargin_60">
 								<div class="item-media">
-                  <%=  image_tag @amodel.avatar_url %>
+                  <%=  image_tag(@amodel.pimage) %>
 								</div>
 								<div class="item-content with_background with_padding">
 									<h3 class="text-uppercase"><%= @amodel.name%> </h3>
@@ -98,9 +98,9 @@
 								<div class="isotope-item bottommargin_10 col-md-3 col-sm-4 col-xs-6 tests">
 									<div class="vertical-item gallery-item content-absolute text-center cs">
 										<div class="item-media">
-                      <%=  image_tag @amodel.portfolios[1].url %>
+                      <%=   %>
 											<div class="media-links">
-                        <%= link_to( image_tag(@amodel.portfolios[1].url), class:'prettyPhoto abs-link', title:'')  %>
+                        <%=   %>
 												<a class="prettyPhoto abs-link" title="" data-gal="prettyPhoto[gal]" href="images/models_square/01.jpg"></a>
 											</div>
 										</div>
@@ -146,108 +146,3 @@
 </div>
 </div>
 </section>
-
-
-
-
-<p id="notice"><%= notice %></p>
-<p>
-  <strong>Name:</strong>
-  <%=  image_tag @amodel.avatar_url(:thumb) %>
-</p>
-<p>
-  <strong>Name:</strong>
-  <%= @amodel.name %>
-</p>
-
-<p>
-  <strong>Gender:</strong>
-  <%= @amodel.gender %>
-</p>
-
-<p>
-  <strong>Age:</strong>
-  <%= @amodel.age %>
-</p>
-
-<p>
-  <strong>Desc:</strong>
-  <%= @amodel.desc %>
-</p>
-
-<p>
-  <strong>Nationality:</strong>
-  <%= @amodel.nationality %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @amodel.city %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @amodel.category %>
-</p>
-
-<p>
-  <strong>Height:</strong>
-  <%= @amodel.height %>
-</p>
-
-<p>
-  <strong>Burst:</strong>
-  <%= @amodel.burst %>
-</p>
-
-<p>
-  <strong>Waist:</strong>
-  <%= @amodel.waist %>
-</p>
-
-<p>
-  <strong>Hip:</strong>
-  <%= @amodel.hip %>
-</p>
-
-<p>
-  <strong>Eye:</strong>
-  <%= @amodel.eye %>
-</p>
-
-<p>
-  <strong>Shoe:</strong>
-  <%= @amodel.shoe %>
-</p>
-
-<p>
-  <strong>Fb:</strong>
-  <%= @amodel.fb %>
-</p>
-
-<p>
-  <strong>Tw:</strong>
-  <%= @amodel.tw %>
-</p>
-
-<p>
-  <strong>Ig:</strong>
-  <%= @amodel.ig %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @amodel.email %>
-</p>
-
-<p>
-  <strong>Tel:</strong>
-  <%= @amodel.tel %>
-</p>
-<p>
-  <strong>Name:</strong>
-  <%=  image_tag @amodel.portfolios[1].url %>
-</p>
-
-<%= link_to 'Edit', edit_amodel_path(@amodel) %> |
-<%= link_to 'Back', amodels_path %>

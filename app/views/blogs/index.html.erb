@@ -1,7 +1,104 @@
+<section class="ls page_portfolio section_padding_top_110">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="isotope_container isotope blog_isotope row masonry-layout columns_margin_bottom_30" data-filters=".blog_filters">
+
+								<div class="isotope-item col-lg-3 col-md-4 col-sm-6 fashion studio session news">
+
+									<div class="vertical-item vertical-center blog-filters-container">
+										<div class="item-content">
+											<div class="display_table">
+												<div class="display_table_cell text-left">
+													<div class="heading bottommargin_45">
+														<p class="text-uppercase josefin grey fontsize_20">Amodels</p>
+														<h2 class="section_header topmargin_5 bottommargin_0">In Da Know</h2>
+													</div>
+													<div class="filters blog_filters">
+														<a href="#" data-filter="*" class="selected">All</a>
+														<a href="#" data-filter=".fashion">Fashion</a>
+														<a href="#" data-filter=".studio">Studio</a>
+														<a href="#" data-filter=".session">Session</a>
+														<a href="#" data-filter=".news">World News</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+                <% @blogs.each do |blog| %>
+								<div class="isotope-item col-lg-3 col-md-4 col-sm-6 session">
+									<article class="vertical-item item-type1 post">
+										<div class="item-media">
+											<%=  image_tag blog.blogprofile_url(:thumb) %>
+										</div>
+										<div class="item-content">
+											<div class="categories-links bottommargin_5 highlight">
+												<a href="#">Session</a>
+											</div>
+											<p class="fontsize_18 bold darklinks2">
+												<a href="blog-single-right.html">
+													<span class="text-uppercase"><%= blog.title %></span> </a>
+											</p>
+											<div class="item-meta">
+												<p>
+													<td><%= blog.shortdesc %></td>
+												</p>
+											</div>
+											<div class="post-social lightgreylinks">
+												<a href="#" class="social-icon soc-facebook"></a>
+												<a href="#" class="social-icon soc-twitter"></a>
+												<a href="#" class="social-icon soc-google"></a>
+												<a href="#" class="social-icon soc-instagram"></a>
+											</div>
+										</div>
+									</article>
+								</div>
+                <% end %>
+							</div>
+							<!-- eof .isotope_container.row -->
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="ls page_portfolio section_padding_top_15 section_padding_bottom_110">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-12 text-center">
+							<div class="with_background line-height0">
+								<ul class="pagination @@size">
+									<li>
+										<a href="#">Prev</a>
+									</li>
+									<li class="active">
+										<a href="#">01</a>
+									</li>
+									<li>
+										<a href="#">02</a>
+									</li>
+									<li>
+										<a href="#">03</a>
+									</li>
+									<li>
+										<a href="#">04</a>
+									</li>
+									<li>
+										<a href="#">05</a>
+									</li>
+									<li>
+										<a href="#">Next</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+
 <p id="notice"><%= notice %></p>
-
-<h1>Blogs</h1>
-
 <table>
   <thead>
     <tr>
